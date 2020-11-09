@@ -9,6 +9,12 @@ body {
     scroll-behavior: smooth !important;
     transition: all 0.25s ease;
 }
+strong {
+    color: rgb(206, 76, 29) !important;
+    outline-style: solid !important;
+    outline-width: .15rem;
+    outline-color: rgb(128, 116, 86);
+}
 
 
 
