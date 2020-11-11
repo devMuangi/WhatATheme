@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css');
 
+@import "variables.scss";
 
 html,
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth !important;
     transition: all 0.25s ease;
+    background-color: $color-main-background !important;
 }
 strong {
-    color: rgb(206, 76, 29) !important;
+    color: $color-decoration !important;
     outline-style: solid !important;
     outline-width: .15rem;
-    outline-color: rgb(128, 116, 86);
+    outline-color: $color-hover;
 }
 
 
@@ -35,7 +37,7 @@ strong {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: black !important;
+    background: $color-hover !important;
 }
 
 ::placeholder {
@@ -48,13 +50,13 @@ strong {
             left: calc(50%);
             width: 8px;
         }
+    color: rgb(206, 76, 29) ;
     }
 }
 
 .is-active {
     font-weight: bold;
 }
-
 .columns {
     .button {
         margin: 0.5rem !important;
