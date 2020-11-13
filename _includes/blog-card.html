@@ -2,11 +2,14 @@
     <a href="{{post.url | absolute_url}}">
         <div class="column has-text-left-desktop has-text-left-tablet">
             <h1 class="title is-size-4-touch">{{post.title}}</h1>
+            <p class="content is-size-4-touch">{{post.description}}</p>
             <div class="content has-text-grey">
-                {{ post.description | truncate: 300 | strip_html | strip_newlines | strip | escape }}
-                <hr class="has-background-grey">
-                <span class="has-text-grey">Published on <span class="has-text-weight-semibold">{{ post.date | date: "%-B %d, %Y" }}</span></span> | <i class="fas fa-clock"></i> <span class="has-text-weight-semibold">{% assign words = post.content | number_of_words %}{%- unless content.size == 0 -%}{{ words | divided_by:180 }} min{% endunless %}</span> read
+                <hr class="has-background-grey"> 
+                <span class="post-category is-uppercase">{{ post.category  }}</span> 
+                <span class="has-text-weight-semibold has-text-left-mobile">{{ post.date | date: "%m:%d:%Y" }}
+                </span> 
             </div>
+            
         </div>
     </a>
 </div>

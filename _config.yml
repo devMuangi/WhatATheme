@@ -2,20 +2,20 @@
 markdown: kramdown
 
 # URL of the Site
-url: ''
+url: 
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
+baseurl:
 
 # Title of the Site
-title: devMuangi.
+title: devCiTi.
 # Description of the Site
-description: Front-end developer based in Kenya.
+description: hundreds of articles for the tech enthusiast!!
 # URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
+site-image: /WhatATheme/assets/images/dave.jpg
 # Keywords of the Site
-site-keywords: Software developer, Front-end engineer, Personal portfolio
+site-keywords: Software developer, Front-end engineer, technology, articles
 # URL for the Image of custom Favicon
-favicon-url: 
+favicon-url: /assets/images/dave.jpg
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
 heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
@@ -45,7 +45,9 @@ author-name: devmuangi
 # URL for the Image of the Author
 author-image:  https://avatars3.githubusercontent.com/u/55136496?s=460&u=20d26b00fde078e5a357b05e08bc699dd6b26b32&v=4
 # 60 Words About the Author
-author-about: When I produced my first hello world web app,I wanted to learn more.This led to completing more than 500 coding challenges at freecodecamp and utilising learning materials on IBM digital nation africa.I consider myself a lifelong tech learner hence I publish weekly articles on my blog in order to help other tech enthusiasts as well.I am currently working as a freelance developer.My go to technologies are REACT | Node Js | Express | but i can always switch according to my client's requirements.I am comfortable working with all kinds of teams.I love a challenge!.Reach me through my email. 
+author-about: Hi. My name is Dave ,Software developer and founder of devCiTi.I publish articles every week to help all tech enthusiasts out there get up to speed with the latest trends and news.I'am currently working as a freelance developer.My go to tech stack is the MERN stack,but I can always switch accoding to the needs of my client.I love a challenge.Feel free to reach out to me.
+
+
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/devmuangi
 
