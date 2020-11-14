@@ -1,5 +1,5 @@
 ---
-title: bash comands:pwd
+title: shell comands:pwd
 category: Unix
 description: a quick guide to the pwd command
 layout: post
