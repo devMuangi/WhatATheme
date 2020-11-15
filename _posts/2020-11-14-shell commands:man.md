@@ -17,7 +17,8 @@ Everytime I'am not sure what a command does,I type :
 > ## `~$ man <command> `
 
 and the shell brings up the manual of the command.
-is also a very useful resource when you want to learn about a command faster.
+
+[tldr](https://tldr.sh/){:target="blank"} is a very useful resource when you want to learn about a command faster.
 
 Install the command by following instaructions on their 
 [official website ](https://tldr.sh/){:target="blank"}  and then run it like this :

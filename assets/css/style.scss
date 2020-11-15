@@ -4,6 +4,7 @@
 @import "main.scss";
 @import "variables.scss";
 
+
 #navbar {
     opacity: 0.95;
     border-bottom: 0.13rem solid  $color-decoration;
@@ -21,7 +22,8 @@
     transform: scale(0.85);
 }
 .button:hover {
-    background-color:  darken($color-main-background, 5%) !important;
+    background-color:  darken($color-main-background, 25%) !important;
+    color: $color-decoration !important;
     transform: scale(0.875);
     
 }
@@ -84,12 +86,8 @@ a.navbar-item.is-active {
     .subtitle {
         letter-spacing: 0.25rem;
         color: transparent;
-        // width: 0;
-        // visibility: ;
-        // border-right: 1px solid white;
         overflow: hidden;
         animation: typewriter 4.5s 4.5s steps(45, end) forwards;
-        // animation: blink 1s step-end 8 backwards,typewriter 4.5s 4.5s steps(45, end) forwards,blink 1s step-end 7,remove-blink 0s 7.5s step-end forwards;
     }
     
     .hero-line {
@@ -98,14 +96,6 @@ a.navbar-item.is-active {
 
     //animations
     @keyframes typewriter {
-        // 0% {
-        //     width: 0;
-        //     border-right: 1px solid white;
-        // }
-        // 100% {
-        //     width: 100%;
-        //     border-right: 1px solid white;
-        // }
         0% {
             color: transparent;
         }
@@ -117,12 +107,6 @@ a.navbar-item.is-active {
         }
     }
     @keyframes blink {
-        // 0%,100% {
-        //     border-color: transparent;
-        // }
-        // 50% {
-        //     border-color: white;
-        // }
 
         0% {
             width: 0%;
@@ -138,16 +122,18 @@ a.navbar-item.is-active {
         }
        
     }
-    // @keyframes remove-blink {
-    //     to {
-    //         border-color: transparent;
-    //     }
-
-    // }
     
-
 }
 
+//recent articles
+
+.recent-articles {
+    color: rgb(206, 76, 29);
+    margin: 2em;
+    font-size: larger;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
 
 #about {
     
@@ -216,7 +202,7 @@ a.navbar-item.is-active {
         background: lighten($color-main-background, 6%);
         -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 15px 0px $color-decoration;
 
         &:hover {
             transform: scale(0.875);
@@ -290,7 +276,6 @@ a.navbar-item.is-active {
         border:  none;
     }
 }
-
 
 #footer {
     #backtotop {

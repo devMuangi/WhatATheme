@@ -1,0 +1,23 @@
+<h1 class="recent-articles has-text-centered">Recent Articles</h1>
+
+<section class="hero is-halfheight" id="blog">
+<div id="results-container">
+<!--Blog Cards Section-->
+{% for post in site.posts offset: 0 limit:3 % %}
+    {% include blog-card.html %}
+{% endfor %}
+</div>
+<div class="container columns is-centered">               
+    <div>
+        <a href="{{site.url}}{{site.baseurl}}/blog"
+            class="button is-uppercase has-text-weight-normal is-black is-outlined">More articles</a>
+        </a>
+    </div>  
+</div>
+<hr>
+</section>
+
+
+
+
+
