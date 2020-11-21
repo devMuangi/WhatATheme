@@ -1,5 +1,5 @@
 ---
-title: shell comands:cd
+title: shell commands:cd
 category: Unix
 description: a quick guide to the cd command
 layout: post

@@ -1,5 +1,5 @@
 ---
-title: shell comands:man
+title: shell commands:man
 category: Unix
 description: a quick guide to the man command 
 layout: post

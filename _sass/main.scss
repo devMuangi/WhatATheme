@@ -15,7 +15,7 @@ strong {
     color: $color-decoration !important;
     outline-style: solid !important;
     outline-width: .15rem;
-    outline-color: $color-hover;
+    outline-color: darken($color-main-background, 20%) !important;
 }
 
 
@@ -50,12 +50,8 @@ strong {
             left: calc(50%);
             width: 8px;
         }
-    color: rgb(206, 76, 29) ;
+    color: $color-decoration;
     }
-}
-
-.is-active {
-    font-weight: bold;
 }
 .columns {
     .button {
@@ -64,7 +60,7 @@ strong {
 }
 
 hr {
-    margin: 1rem auto;
+    margin: 1rem auto !important;
     height: 1px;
 }
 

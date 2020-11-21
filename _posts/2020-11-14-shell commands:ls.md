@@ -1,5 +1,5 @@
 ---
-title: shell comands:ls
+title: shell commands:ls
 category: Unix
 description: a quick guide to the ls command
 layout: post

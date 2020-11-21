@@ -7,11 +7,47 @@
 
 #navbar {
     opacity: 0.95;
+    background: darken($color-main-background, 80%) !important;
     border-bottom: 0.13rem solid  $color-decoration;
 }
 
 .is-active {
     font-weight: 600;
+}
+
+.navbar-dropdown {
+    background: darken($color-main-background, 80%) !important;
+    border: 0.13rem solid  $color-decoration;
+    right: 0;
+    left: auto;
+}
+.navbar-item {
+    color: darken($color-main-background, 20%) !important;
+    font-weight: 800;
+}
+.navbar-link {
+    color: darken($color-main-background, 20%) !important;
+    font-weight: 800; 
+}
+
+a.navbar-item:hover,
+.navbar-link:hover {
+    background-color: darken($color-main-background, 30%) !important;
+    color: $color-decoration !important;
+}
+
+a.navbar-item.is-active {
+    background-color: darken($color-main-background, 30%) !important;
+    color: $color-decoration !important;
+
+    &:hover {
+        background-color: darken($color-main-background, 30%) !important;
+        color: $color-decoration;
+    }
+}
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: $color-hover;
 }
 
 .button {
@@ -22,51 +58,21 @@
     transform: scale(0.85);
 }
 .button:hover {
-    background-color:  darken($color-main-background, 25%) !important;
+    background-color:  darken($color-main-background, 20%) !important;
     color: $color-decoration !important;
-    transform: scale(0.875);
-    
-}
-
-.navbar-dropdown {
-    border: 0.13rem solid  $color-decoration;
-    right: 0;
-    left: auto;
-}
-.navbar-item {
-    color: #7a7a7a;
-}
-
-a.navbar-item:hover,
-.navbar-link:hover {
-    background-color: $color-hover !important;
-    color: $color-decoration !important;
-}
-
-a.navbar-item.is-active {
-    background-color: $color-hover !important;
-    color: $color-decoration !important;
-
-    &:hover {
-        background-color: $color-hover !important;
-        color: $color-decoration;
-    }
-}
-
-.navbar-link:not(.is-arrowless)::after {
-    border-color: $color-hover;
+    transform: scale(0.875); 
 }
 
 
 #hero {
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 1);
     background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
 
     &::before {
-        filter: blur(0.10rem);
+        // filter: blur(0.10rem);
         background-image: url({{site.heroimage}});
         background-position: center;
         background-repeat: no-repeat;
@@ -128,15 +134,19 @@ a.navbar-item.is-active {
 //recent articles
 
 .recent-articles {
-    color: rgb(206, 76, 29);
+    color: $color-decoration;
     margin: 2em;
     font-size: larger;
     font-weight: bolder;
     text-transform: uppercase;
 }
 
+//about section
+
 #about {
     
+    background: darken($color-main-background, 10%);
+
     .image {
         max-width: 20vmax;
         margin: auto;
@@ -146,9 +156,9 @@ a.navbar-item.is-active {
         }
     }
     .about-paragraph {
-        color: darken($color-main-background, 75%);
+        color: darken($color-main-background, 80%);
        
-    }
+       }
 
     a {
         min-width: 25vmax;
@@ -182,6 +192,8 @@ a.navbar-item.is-active {
     }
 }
 
+//blog section
+
 #blog {
     .hero-body {
         padding: 3rem 0.25rem 1rem 0.25rem;
@@ -199,16 +211,16 @@ a.navbar-item.is-active {
         margin-left: 4.5vmax;
         line-height: normal;
         border-radius: 0.25rem;
-        background: lighten($color-main-background, 6%);
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 15px 0px $color-decoration;
+        background: darken($color-main-background, 20%);
+        -webkit-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
+        -moz-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
+        box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
 
         &:hover {
-            transform: scale(0.875);
-            -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-            -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.29);
+        transform: scale(0.875);
+        -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
+        -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
+        box-shadow: 0px 0px 15px 0px $color-decoration;
         }
 
         @media (max-width: 768px) {
@@ -231,7 +243,7 @@ a.navbar-item.is-active {
 
         .content {
             margin: 0.5rem;
-            color: darken($color-main-background, 60%) !important;
+            color: darken($color-main-background, 65%) !important;
         
         &:hover {
             color: darken($color-main-background, 70%) !important ;
@@ -247,8 +259,6 @@ a.navbar-item.is-active {
         color: darken($color-main-background, 85%);
         font-weight: bolder;
         padding: .5em;
-        // margin-left: 4em;
-
     }
 }
 
@@ -273,9 +283,11 @@ a.navbar-item.is-active {
             outline: 0.15rem solid $color-decoration !important;
         }
 
-        border:  none;
+        border: none;
     }
 }
+
+//footer section
 
 #footer {
     #backtotop {
@@ -287,6 +299,9 @@ a.navbar-item.is-active {
         &:hover {
             transform: scale(1.05);
         }
+    }
+    .footer-main-section {
+        background: darken($color-main-background, 80%);
     }
 
     .container {
@@ -304,10 +319,10 @@ a.navbar-item.is-active {
             }
 
             a {
-                color: #7a7a7a;
+                color: darken($color-main-background, 20) !important;
 
                 &:hover {
-                    color: white;
+                    color: $color-decoration !important;
                 }
             }
         }
@@ -338,21 +353,28 @@ a.navbar-item.is-active {
     }
 
     #project-card {
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
+        -moz-box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
+        box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
         transform: scale(0.95);
         transition: all 0.5s ease;
         margin-bottom: 0.5rem !important;
         display: inline-table;
+        
+        
         &:hover {
             transform: scale(0.975);
         }
     }
     .card {
+        background-color: darken($color-main-background, 20%);
+        color: darken($color-main-background, 80%);
+        border-radius: 0.25rem;
         transition: all 0.25s ease;
         &:hover {
-            background-color: rgba($color: #000000, $alpha: 0.90)!important;
+            -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
+            -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
+            box-shadow: 0px 0px 15px 0px $color-decoration; 
         }
     }
 }
