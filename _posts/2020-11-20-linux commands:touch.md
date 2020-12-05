@@ -12,10 +12,10 @@ tags:
 
 Use the `touch` command to create an empty file using this syntax:
 
-> ## `~$ touch filename `
+`~$ touch <filename>`
 
 
-`If the file already exists,it opens it in write mode and the timestamp of the file is updated.`
+>If the file already exists,it opens it in write mode and the timestamp of the file is updated.
 
 
 

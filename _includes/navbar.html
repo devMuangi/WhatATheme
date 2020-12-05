@@ -4,7 +4,8 @@
         <div class="navbar-brand">
             <a class="navbar-item"
                 href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">
-                <strong>{{site.title}}</strong>
+                <!-- <strong>{{site.title}}</strong> -->
+                <div id="logo">{{site.title}}</div>
             </a>
             <div class="navbar-burger" data-target="navbar-menu">
                 <span></span>
@@ -21,11 +22,12 @@
             <!-- navbar items | right side -->
             <div class="navbar-end">
                 <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
-                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">ABOUT</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#contact">WORK WITH ME</a>
+                href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
+                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/about">ABOUT</a>
+                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#contact">CONTACT ME</a>
                 <a class="navbar-item {% if page.layout == 'blog' %}is-active{% endif %}"
                     href="{{site.url}}{{site.baseurl}}/blog">READ ARTICLES</a>
+                <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#contact">WORK WITH ME</a> -->
                 {% include dropdown.html %}
             </div>
 

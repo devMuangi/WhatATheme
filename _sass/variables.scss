@@ -1,5 +1,12 @@
 //variables
-$color-decoration: rgb(206, 76, 29);
-$color-hover: rgba($color: #fff, $alpha: 0.25);
+
+//colors
+$color-decoration: rgb(201, 64, 23);
 $color-main-background: rgb(255, 255, 255)  ;
 $color-content: lighten($color-main-background, 20%);
+
+//transitions and animations
+$transition-main: all 0.50s ease;
+
+//borders
+$border-radius-main: 0.25rem;

@@ -10,21 +10,22 @@
           <h1 class="title is-size-4">{{ project.name }}</h1>
           <p class="has-text-weight-normal content">{{ project.description | truncate: 80}}</p>
         </div>
-
         <div class="container columns is-centered">               
         <div>
             <a href="{{site.url}}{{site.baseurl}}/{{ project.link }}" target="_blank"
-                class="button is-uppercase has-text-weight-normal is-black is-outlined">Live</a>
+                class="button" 
+                style="background-color: yellow;">Live</a>
             </a>
         </div>
         <div>
             <a href="{{site.url}}{{site.baseurl}}/{{ project.github}}"target="_blank"
-                class="button is-uppercase has-text-weight-normal is-black is-outlined">Code</a>
+                class="button"  class="button" style="background-color: rgb(209, 46, 41);">Code</a>
             </a>
         </div>
         <div>
-          <a href="{{site.url}}{{site.baseurl}}/{{ project.article }}"
-              class="button is-uppercase has-text-weight-normal is-black is-outlined">More</a>
+          <a href="{{site.url}}{{site.baseurl}}/{{ project.article }}"target="_blank"
+              class="button"
+              style="background-color: rgb(33, 226, 184);">More</a>
           </a>
         </div>   
       </div>

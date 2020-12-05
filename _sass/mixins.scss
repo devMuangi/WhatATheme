@@ -1,0 +1,48 @@
+@mixin mybutton {
+    border: 0.15rem solid  darken($color-decoration, 20%)!important;
+    color: darken($color-main-background, 85%) !important;
+    background-color: lighten($color-decoration, 5%) !important;
+    transition: $transition-main;
+    font-weight: bolder !important;
+    transform: scale(0.85);
+    text-transform: uppercase;
+    border-radius: 0.25em;
+    padding: 0.45em;
+
+    
+    &:hover {
+        background-color: darken($color-main-background, 20%) !important;
+        color: $color-decoration !important;
+        transform: scale(0.875);
+        -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
+        -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
+        box-shadow: 0px 0px 15px 0px ($color-decoration); 
+        }
+}
+
+@mixin hero-background {
+    // background: rgba(206, 142, 70, 0.712);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+@mixin card {
+    line-height: normal;
+    transform: scale(0.85);
+    transition:$transition-main;
+    border-radius: $border-radius-main;
+    color: darken($color-main-background, 80%);  
+    background: darken($color-main-background, 20%);
+    -webkit-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
+    -moz-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
+    box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
+
+      &:hover {
+        transform: scale(0.875);
+        -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
+        -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
+        box-shadow: 0px 0px 15px 0px $color-decoration;
+        }
+}

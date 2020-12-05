@@ -3,12 +3,13 @@
 
 @import "main.scss";
 @import "variables.scss";
+@import "mixins.scss";
 
 
 #navbar {
     opacity: 0.95;
     background: darken($color-main-background, 80%) !important;
-    border-bottom: 0.13rem solid  $color-decoration;
+    border-bottom: 0.15rem solid  $color-decoration;
 }
 
 .is-active {
@@ -47,29 +48,18 @@ a.navbar-item.is-active {
 }
 
 .navbar-link:not(.is-arrowless)::after {
-    border-color: $color-hover;
+    border-color: $color-decoration;
 }
 
 .button {
-    border: 0.13rem solid  $color-decoration !important;
-    color: darken($color-main-background, 85%) !important;
-    transition: all 0.25s ease;
-    font-weight: bolder !important;
-    transform: scale(0.85);
-}
-.button:hover {
-    background-color:  darken($color-main-background, 20%) !important;
-    color: $color-decoration !important;
-    transform: scale(0.875); 
+    @include mybutton;
 }
 
 
 #hero {
-    background: rgba(0, 0, 0, 1);
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    background: rgba(206, 142, 70, 0.712);
+    @include hero-background;
+    
 
     &::before {
         // filter: blur(0.10rem);
@@ -93,15 +83,18 @@ a.navbar-item.is-active {
         letter-spacing: 0.25rem;
         color: transparent;
         overflow: hidden;
-        animation: typewriter 4.5s 4.5s steps(45, end) forwards;
+        animation: fade-in 4.5s 4.5s steps(45, end) forwards;
     }
-    
     .hero-line {
         animation: blink 3s step-end 3 ;
     }
+    .hero-button {
+        @include mybutton;
+        background-color: yellow;
+    }
 
     //animations
-    @keyframes typewriter {
+    @keyframes fade-in {
         0% {
             color: transparent;
         }
@@ -136,8 +129,8 @@ a.navbar-item.is-active {
 .recent-articles {
     color: $color-decoration;
     margin: 2em;
-    font-size: larger;
-    font-weight: bolder;
+    font-size: large;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -157,7 +150,6 @@ a.navbar-item.is-active {
     }
     .about-paragraph {
         color: darken($color-main-background, 80%);
-       
        }
 
     a {
@@ -172,6 +164,7 @@ a.navbar-item.is-active {
 
 #contact {
     #contact-button {
+        @include mybutton;
         margin: 0.5rem auto;
         display: flex;
         justify-content: center;
@@ -204,24 +197,10 @@ a.navbar-item.is-active {
     }
 
     #blog-card {
-        transition: all 0.25s ease;
         margin-bottom: 0.5vmax;
-        transform: scale(0.85);
         margin-right: 4.5vmax;
         margin-left: 4.5vmax;
-        line-height: normal;
-        border-radius: 0.25rem;
-        background: darken($color-main-background, 20%);
-        -webkit-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
-        -moz-box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
-        box-shadow: 0px 0px 30px 0px darken($color-main-background, 20%);
-
-        &:hover {
-        transform: scale(0.875);
-        -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
-        -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
-        box-shadow: 0px 0px 15px 0px $color-decoration;
-        }
+        @include card;
 
         @media (max-width: 768px) {
             transform: scale(1);
@@ -263,7 +242,7 @@ a.navbar-item.is-active {
 }
 
 #search {
-    border-bottom: 0.15rem solid;
+    border-bottom: 0.15rem solid $color-decoration;
 
     input {
         border: none;
@@ -278,7 +257,7 @@ a.navbar-item.is-active {
     }
 
     .button {
-        transition: all 0.25s ease;
+        transition: $transition-main;
         &:focus {
             outline: 0.15rem solid $color-decoration !important;
         }
@@ -291,7 +270,7 @@ a.navbar-item.is-active {
 
 #footer {
     #backtotop {
-        transition: all 0.25s ease;
+        transition: $transition-main;
         width: 10rem;
         padding: 0.25rem;
         margin: auto auto 1rem auto;
@@ -343,7 +322,7 @@ a.navbar-item.is-active {
 #project {
     .columns {
         .column {
-            border-radius: 0.5rem;
+            border-radius: $border-radius-main;
             .image {
                 background-position: center;
                 background-repeat: no-repeat;
@@ -353,29 +332,11 @@ a.navbar-item.is-active {
     }
 
     #project-card {
-        -webkit-box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
-        -moz-box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
-        box-shadow: 0px 0px 15px 0px darken($color-main-background, 20%);
-        transform: scale(0.95);
-        transition: all 0.5s ease;
         margin-bottom: 0.5rem !important;
-        display: inline-table;
-        
-        
-        &:hover {
-            transform: scale(0.975);
-        }
+        display: inline-table;   
     }
     .card {
-        background-color: darken($color-main-background, 20%);
-        color: darken($color-main-background, 80%);
-        border-radius: 0.25rem;
-        transition: all 0.25s ease;
-        &:hover {
-            -webkit-box-shadow: 0px 0px 15px 0px $color-decoration;
-            -moz-box-shadow: 0px 0px 15px 0px $color-decoration;
-            box-shadow: 0px 0px 15px 0px $color-decoration; 
-        }
+        @include card;    
     }
 }
 
@@ -393,7 +354,7 @@ a.navbar-item.is-active {
         margin: auto;
     }
     #post-image {
-        border-radius: 0.25rem;
+        border-radius: $border-radius-main;
     }
     .subtitle {
         letter-spacing: 0.05rem;
@@ -411,7 +372,7 @@ a.navbar-item.is-active {
             display: inline-block;
         }
         hr{
-            background-color: $color-hover;
+            background-color: $color-decoration;
         }
         img, iframe {
             max-width: calc(100% - 25vw);

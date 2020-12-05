@@ -8,17 +8,28 @@ html,
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth !important;
-    transition: all 0.25s ease;
-    background-color: $color-main-background !important;
+    transition: $transition-main !important;
+    background-color: darken($color-main-background, 8%) !important;
+    
 }
-strong {
+
+code {
+    background-color:darken($color-main-background, 70%);
+    color: lighten($color-decoration, 15%) !important;
+    font-family: monospace;
+    font-size: large;
+    letter-spacing: normal;
+}
+a {
     color: $color-decoration !important;
-    outline-style: solid !important;
-    outline-width: .15rem;
-    outline-color: darken($color-main-background, 20%) !important;
+    &:hover{
+        color: darken($color-main-background, 20%) !important;
+    }
 }
-
-
+hr {
+    margin: 1rem auto !important;
+    height: 1px;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -37,7 +48,7 @@ strong {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $color-hover !important;
+    background: #363636 !important;
 }
 
 ::placeholder {
@@ -53,17 +64,18 @@ strong {
     color: $color-decoration;
     }
 }
+#logo {
+    color: $color-decoration !important;
+    outline-style: solid !important;
+    outline-width: .15rem;
+    outline-color: darken($color-main-background, 20%) !important;
+
+}
 .columns {
     .button {
         margin: 0.5rem !important;
     }
 }
-
-hr {
-    margin: 1rem auto !important;
-    height: 1px;
-}
-
 .column {
     margin: auto 0.5rem;
     padding: 0.5rem;

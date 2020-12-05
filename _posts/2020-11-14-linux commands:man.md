@@ -1,20 +1,20 @@
 ---
-title: shell commands:man
+title: linux commands:man
 category: Unix
 description: a quick guide to the man command 
 layout: post
 tags:
 - unix
 - terminal
-- linux
+- man
 ---
 
-man command is used to understand other commands.
+The `man` command is used to understand other commands.
 
 Everytime I'am not sure what a command does,I type :
 
 
-> ## `~$ man <command> `
+`~$ man <command> `
 
 and the shell brings up the manual of the command.
 
@@ -23,7 +23,7 @@ and the shell brings up the manual of the command.
 Install the command by following instaructions on their 
 [official website ](https://tldr.sh/){:target="blank"}  and then run it like this :
 
-> ## `~$ tldr <command> `
+`~$ tldr <command> `
 
 to get a quick overview of the command.
 

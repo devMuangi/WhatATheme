@@ -12,21 +12,21 @@ tags:
 
 Use the `open` command to open a file using this syntax:
 
-> ## `~$ open project `
+`~$ open project `
 
 Open a directory too :
 
-> ## `~$ open directory name `
+`~$ open directory name `
 
-`opens the Finder app with current directory open in macOS.`
+>opens the Finder app with current directory open in macOS.
 
 Use the special `.` symbol to open the current directory :
 
-> ## `~$ open .`
+`~$ open .`
 
 This command can also be used to run an application:
 
-> ## `~$ open application name`
+`~$ open application name`
 
 
 

@@ -1,5 +1,5 @@
-<div class="columns has-text-centered" id="blog-card">
-    <a href="{{post.url | absolute_url}}">
+<a href="{{post.url | absolute_url}}">
+    <div class="columns has-text-centered" id="blog-card">
         <div class="column has-text-left-desktop has-text-left-tablet">
             <h1 class="title is-size-4-touch">{{post.title}}</h1>
             <p class="content is-size-4-touch">{{post.description}}</p>
@@ -8,8 +8,7 @@
                 <span class="post-category is-uppercase">{{ post.category  }}</span> 
                 <span class="has-text-weight-semibold has-text-left-mobile">{{ post.date | date: "%m:%d:%Y" }}
                 </span> 
-            </div>
-            
+            </div> 
         </div>
-    </a>
-</div>
+    </div>
+</a>

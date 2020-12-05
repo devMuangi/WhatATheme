@@ -1,25 +1,25 @@
 ---
-title: shell commands:ls
+title: linux commands:ls
 category: Unix
 description: a quick guide to the ls command
 layout: post
 tags:
-- unix
-- terminal
 - linux
+- terminal
+- ls
 ---
 
-Use ls to list the contents inside a folder. 
+Use `ls` to list the contents inside a folder. 
 
 Typing 
 
-> ## `~my-project$ ls `
+`~my-project$ ls `
 
-will list the contents that are inside the **my-project** directory.
+will list the contents that are inside the `my-project` directory.
 
 Also , adding a folder name/path to ls lists the contents of the directory.
 
-> ## `~$ ls/my-project `
+`~$ ls/my-project `
 
 will list the contents of the my-project directory.
 
@@ -27,13 +27,13 @@ ls accepts alot more options.
 
 To view hidden files, type 
 
-> ## `~my-project$ ls -a`
+`~my-project$ ls -a`
 
-on your terminal.You will see directories that start with a dot.Example **.my-project** is a hidden file.
+on your terminal.You will see directories that start with a dot.Example `.my-project` is a hidden file.
 
 To get alot more information like file permissions ,file owner and file modified date, type 
 
-> ## `~my-project$ ls -l`
+`~my-project$ ls -l`
 
 on your terminal.
 
@@ -41,11 +41,11 @@ These arguments can also be combined.
 
 Typing 
 
-> ## `~$ ls -al`
+`~$ ls -al`
 
 on your terminal gives this information.
 
-![Test Image](/assets/images/shell commands ls.png)
+![ls screenshot](/assets/images/shell commands ls.png)
 
 From left to right :
 

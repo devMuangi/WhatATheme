@@ -1,9 +1,11 @@
 ---
-title: my journey
+title: Get to know me!!
 layout: page
 ---
 
-**A timeline of my journey of becoming a software developer.**
+**A timeline of my journey of becoming a software developer.**<br>
+
+![Test Image](/assets/images/dave.jpg)
 
 **August 2018**
 
@@ -19,7 +21,7 @@ I received multiple certifications as a result of completing more than 500 codin
 
 The certifications include :
 
-* >[Javascript data structures and algorithms](/blog)
+* [Javascript data structures and algorithms](/blog)
 * >[freecodecamp fullstack developer](/blog)
 * >[Responsive web design](/blog)
 * >[Data visualization](/blog)
