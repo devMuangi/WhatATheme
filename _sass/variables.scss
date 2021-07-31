@@ -1,9 +1,12 @@
 //variables
 
 //colors
-$color-decoration: rgb(201, 64, 23);
-$color-main-background: rgb(255, 255, 255)  ;
+//$color-decoration:rgb(50, 224, 196);
+ $color-decoration: #d3e4e0;
+$color-main-background: rgb(255, 255, 255);
+// $color-main-background:#221b26;
 $color-content: lighten($color-main-background, 20%);
+// $color-content:#d3e4e0;
 
 //transitions and animations
 $transition-main: all 0.50s ease;

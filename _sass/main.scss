@@ -15,7 +15,7 @@ body {
 
 code {
     background-color:darken($color-main-background, 70%);
-    color: lighten($color-decoration, 15%) !important;
+    color: darken($color-decoration, 55%) !important;
     font-family: monospace;
     font-size: large;
     letter-spacing: normal;
@@ -77,7 +77,7 @@ hr {
     }
 }
 .column {
-    margin: auto 0.5rem;
+    margin: 3rem 0.5rem;
     padding: 0.5rem;
 }
 
